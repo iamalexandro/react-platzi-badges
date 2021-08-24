@@ -5,7 +5,7 @@ class BadgeForm extends React.Component {
     firstName: "",
     lastName: "",
     email: "",
-    jobTiTle: "",
+    jobTitle: "",
     twitter: "",
   };
 
