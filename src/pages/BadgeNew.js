@@ -3,6 +3,7 @@ import React from "react";
 import "./styles/BadgeNew.css";
 import header from "../images/badge-header.svg";
 import Navbar from "../components/Navbar";
+import BadgeForm from "../components/BadgeForm";
 import Badge from "../components/Badge";
 
 class BadgeNew extends React.Component {
@@ -16,14 +17,17 @@ class BadgeNew extends React.Component {
 
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col-6">
               <Badge
-                avatarUrl="https://media-exp1.licdn.com/dms/image/C5603AQGaZYXT3lye2A/profile-displayphoto-shrink_200_200/0/1614566026990?e=1623888000&v=beta&t=VXYRat638GJJRVuhgV5DRR-2AaTUYo7H4GwPf7aqT-E"
+                avatarUrl="https://media-exp1.licdn.com/dms/image/C5603AQGaZYXT3lye2A/profile-displayphoto-shrink_400_400/0/1614566026990?e=1635379200&v=beta&t=JR-FXr4jd4v8byBjRydvGk5VM4Wlybf0KJwDWH8ifOQ"
                 firstName="Nicola"
                 lastName="Di Candia"
                 jobTitle="Front End Developer"
                 twitter="iamalexandro"
               />
+            </div>
+            <div className="col-6">
+              <BadgeForm />
             </div>
           </div>
         </div>
