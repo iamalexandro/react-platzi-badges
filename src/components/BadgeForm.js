@@ -1,97 +1,83 @@
-import React from "react";
+import React from 'react';
 
 class BadgeForm extends React.Component {
-  state = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    jobTitle: "",
-    twitter: "",
-  };
+	state = {
+		firstName: '',
+		lastName: '',
+		email: '',
+		jobTitle: '',
+		twitter: '',
+	};
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
+	render() {
+		return (
+			<div>
+				<h1>New Attendant</h1>
 
-  handleClick = (e) => {
-    console.log("Button was clicked");
-  };
+				<form action="" onSubmit={this.handleSubmit}>
+					<div className="form-group">
+						<label htmlFor="">First Name</label>
+						<input
+							onChange={this.props.onChange}
+							className="form-control"
+							type="text"
+							name="firstName"
+							maxLength="12"
+							value={this.props.formValues.firstName}
+						/>
+					</div>
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state);
-  };
+					<div className="form-group">
+						<label htmlFor="">Last Name</label>
+						<input
+							onChange={this.props.onChange}
+							className="form-control"
+							type="text"
+							name="lastName"
+							value={this.props.formValues.lastName}
+						/>
+					</div>
 
-  render() {
-    return (
-      <div>
-        <h1>New Attendant</h1>
+					<div className="form-group">
+						<label htmlFor="">Job Title</label>
+						<input
+							onChange={this.props.onChange}
+							className="form-control"
+							type="text"
+							name="jobTitle"
+							value={this.props.formValues.jobTitle}
+						/>
+					</div>
 
-        <form action="" onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="">First Name</label>
-            <input
-              onChange={this.handleChange}
-              className="form-control"
-              type="text"
-              name="firstName"
-              value={this.state.firstName}
-            />
-          </div>
+					<div className="form-group">
+						<label htmlFor="">Twitter</label>
+						<input
+							onChange={this.props.onChange}
+							className="form-control"
+							type="text"
+							name="twitter"
+							value={this.props.formValues.twitter}
+						/>
+					</div>
 
-          <div className="form-group">
-            <label htmlFor="">Last Name</label>
-            <input
-              onChange={this.handleChange}
-              className="form-control"
-              type="text"
-              name="lastName"
-              value={this.state.lastName}
-            />
-          </div>
+					<div className="form-group">
+						<label htmlFor="">Email</label>
+						<input
+							onChange={this.props.onChange}
+							className="form-control"
+							type="email"
+							name="email"
+							value={this.props.formValues.email}
+						/>
+					</div>
 
-          <div className="form-group">
-            <label htmlFor="">Email</label>
-            <input
-              onChange={this.handleChange}
-              className="form-control"
-              type="email"
-              name="email"
-              value={this.state.email}
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="">Job Title</label>
-            <input
-              onChange={this.handleChange}
-              className="form-control"
-              type="text"
-              name="jobTitle"
-              value={this.state.jobTitle}
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="">Twitter</label>
-            <input
-              onChange={this.handleChange}
-              className="form-control"
-              type="text"
-              name="twitter"
-              value={this.state.twitter}
-            />
-          </div>
-
-          <button onClick={this.handleClick} className="btn btn-primary">
-            Save
-          </button>
-        </form>
-      </div>
-    );
-  }
+					<button onClick={this.props.onSubmit} className="btn btn-primary">
+						Save
+					</button>
+				</form>
+			</div>
+		);
+	}
 }
 
 export default BadgeForm;
