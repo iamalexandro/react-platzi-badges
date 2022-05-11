@@ -25,6 +25,6 @@
 
 .Badges__buttons {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   margin: 2rem;
 }

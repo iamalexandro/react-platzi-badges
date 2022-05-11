@@ -34,35 +34,34 @@ class BadgeNew extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Navbar />
-				<div className="BadgeNew__hero">
-					<img className="img-fluid" src={header} alt="Logo" />
-				</div>
+      <React.Fragment>
+        <div className="BadgeNew__hero">
+          <img className="img-fluid" src={header} alt="Logo" />
+        </div>
 
-				<div className="container">
-					<div className="row">
-						<div className="col-sm-12 col-md-6 mt-4">
-							<Badge
-								avatarUrl="https://media-exp1.licdn.com/dms/image/C5603AQGaZYXT3lye2A/profile-displayphoto-shrink_400_400/0/1614566026990?e=1635379200&v=beta&t=JR-FXr4jd4v8byBjRydvGk5VM4Wlybf0KJwDWH8ifOQ"
-								firstName={this.state.form.firstName}
-								lastName={this.state.form.lastName}
-								jobTitle={this.state.form.jobTitle}
-								email={this.state.form.email}
-								twitter={this.state.form.twitter}
-							/>
-						</div>
-						<div className="col-sm-12 col-md-6 mt-4">
-							<BadgeForm
-								onChange={this.handleChange}
-								formValues={this.state.form}
-								onSubmit={this.handleSubmit}
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-		);
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-6 mt-4">
+              <Badge
+                avatarUrl="https://media-exp1.licdn.com/dms/image/C5603AQGaZYXT3lye2A/profile-displayphoto-shrink_100_100/0/1614566026990?e=1657756800&v=beta&t=Pr_SFQ6MKKo0sdHP5bjhjbwY8ds-2jMTDjYbPArtZ2Q"
+                firstName={this.state.form.firstName}
+                lastName={this.state.form.lastName}
+                jobTitle={this.state.form.jobTitle}
+                email={this.state.form.email}
+                twitter={this.state.form.twitter}
+              />
+            </div>
+            <div className="col-sm-12 col-md-6 mt-4">
+              <BadgeForm
+                onChange={this.handleChange}
+                formValues={this.state.form}
+                onSubmit={this.handleSubmit}
+              />
+            </div>
+          </div>
+        </div>
+      </React.Fragment>
+    );
 	}
 }
 
