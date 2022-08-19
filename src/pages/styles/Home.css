@@ -1,0 +1,10 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  align-items: "center";
+}
+
+.home__element {
+  margin: auto;
+}
