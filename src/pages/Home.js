@@ -9,9 +9,8 @@ function Home() {
       <h1 className="home__element">Welcome to Platzi</h1>
       <div className="home__element">
         <Link to="/badges" className="btn btn-primary">
-          New Badge
+          Go to Badges
         </Link>
-        {/* <button className="btn btn-primary">Go to Badges</button> */}
       </div>
     </div>
   );
